@@ -1,0 +1,17 @@
+
+[Unit]
+Description=Gunicorn daemon for bookservice  
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/bookservice
+UMask=0007
+ExecStart=/home/ubuntu/bookservice/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/bookservice/bookservice.sock bookservice.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+
+
