@@ -5,3 +5,5 @@ __pycache__/ *.py[cod]
 *.sqlite3 *.log *.pot *.pyc media/ staticfiles/
 # Environments
 .env venv/
+*.pem
+LightsailDefaultKey-ap-northeast-2.pem
